@@ -1,1 +1,10 @@
-index.html.erb
+<%= render "layouts/navbar" %>
+
+<div class="container">
+
+<% @cocktails.each do |cocktail| %>
+<div class="card m-3">
+  <%= link_to cocktail.name, cocktail_path(cocktail) %>
+</div>
+<% end %>
+</div>
