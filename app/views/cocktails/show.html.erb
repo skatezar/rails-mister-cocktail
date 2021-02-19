@@ -7,4 +7,8 @@
 <%= link_to 'leave a dose note', new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
 
 
-<%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+<% @cocktail.photos.each do |photo| %>
+
+<%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+
+<% end %>
