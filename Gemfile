@@ -53,3 +53,6 @@ gem 'rails-controller-testing', group: [ :test ]
 
 gem 'dotenv-rails', groups: [:development, :test]
 
+
+#cloudinary setup
+gem 'cloudinary', '~> 1.16.0'
