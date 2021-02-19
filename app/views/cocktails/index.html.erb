@@ -3,11 +3,21 @@
 <div class="container">
 
 <% @cocktails.each do |cocktail| %>
-<div class="card m-3">
-  <%= link_to cocktail.name, cocktail_path(cocktail) %>
+
+<div class="container">
+  <div class="card-product">
+    <%= cl_image_tag cocktail.photo.key, height: 75, width: 100, crop: :fill %>
+    <div class="card-product-infos">
+      <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+      <p>Product description with <strong>relevant info</strong> only.</p>
+    </div>
+  </div>
 </div>
 <% end %>
 </div>
 
+<!--
 <%= cl_image_tag("h0e8n1rlslcgr6miqjbi",
-      width: 400, height: 300, crop: :fill) %>
+      width: 400, height: 300, crop: :limit) %>
+
+ -->
